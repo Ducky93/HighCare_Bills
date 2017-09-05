@@ -23,6 +23,7 @@ package DataBaseManageAndReport; /**
 
 import Forms.PrintBills;
 import TablesDesign.myTableMode;
+import Utils.GeneralCache;
 import com.mysql.jdbc.ResultSet;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRMapCollectionDataSource;
@@ -72,13 +73,19 @@ public class DatabaseDatasourceReport {
         }
 
         try {
-//            dataReportsGeneratorConn = dbManager.checkConnection(dataReportsGeneratorConn);
-            String sqlInsertingData ;
-            sqlInsertingData = "SELECT * FROM "+ Employee.companyDetails +" WHERE company_name = ?;";
-            preparedStatement= MyMainConnection.getInstance().prepareStatement(sqlInsertingData);
-            preparedStatement.setString(1,companyName);
             ResultSet rsInsertingData;
-            rsInsertingData = (ResultSet) preparedStatement.executeQuery();
+//            dataReportsGeneratorConn = dbManager.checkConnection(dataReportsGeneratorConn);
+            if(GeneralCache.callCache().get("Company Data")==null) {
+                String sqlInsertingData;
+                sqlInsertingData = "SELECT * FROM " + Employee.companyDetails + " WHERE company_name = ?;";
+                preparedStatement = MyMainConnection.getInstance().prepareStatement(sqlInsertingData);
+                preparedStatement.setString(1, companyName);
+
+                rsInsertingData = (ResultSet) preparedStatement.executeQuery();
+                GeneralCache.callCache().put("Company Data", rsInsertingData);
+            }else{
+                rsInsertingData = (ResultSet) GeneralCache.callCache().get("Company Data");
+            }
             String taxes_file = null;
             String sales_taxes = null;
             String commercialLog = null;
