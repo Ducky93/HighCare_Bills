@@ -59,6 +59,7 @@ public class Employee {
         EMP_NATIONALID = emp_nationalid;
         EMP_PHONE = emp_phone;
         EMP_JOINDATE = emp_joindate;
+        EMP_JOINDATE = emp_joindate;
         EMP_EXTRANOTES = emp_extranotes;
         EMP_CITY = emp_city;
         EMP_LOCATION = emp_location;
