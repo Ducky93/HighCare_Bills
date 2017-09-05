@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="dynamicReports">
+    <CLASSES />
+    <JAVADOC>
+      <root url="file://F:/java_Libs/dynamicreports-4.1.1/apidocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://F:/java_Libs/dynamicreports-4.1.1/examples/eclipse/dynamicreports-examples/src" />
+      <root url="file://F:/java_Libs/dynamicreports-4.1.1/examples/netbeans/dynamicreports-examples/src" />
+      <root url="file://F:/java_Libs/dynamicreports-4.1.1/projects/dynamicreports-adhoc/src/main/java" />
+      <root url="file://F:/java_Libs/dynamicreports-4.1.1/projects/dynamicreports-adhoc/src/test/java" />
+      <root url="file://F:/java_Libs/dynamicreports-4.1.1/projects/dynamicreports-core/src/main/java" />
+      <root url="file://F:/java_Libs/dynamicreports-4.1.1/projects/dynamicreports-core/src/test/java" />
+      <root url="file://F:/java_Libs/dynamicreports-4.1.1/projects/dynamicreports-examples/src/main/java" />
+      <root url="file://F:/java_Libs/dynamicreports-4.1.1/projects/dynamicreports-googlecharts/src/main/java" />
+      <root url="file://F:/java_Libs/dynamicreports-4.1.1/projects/dynamicreports-googlecharts/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

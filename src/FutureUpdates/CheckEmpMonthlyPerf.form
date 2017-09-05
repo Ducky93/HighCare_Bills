@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FutureUpdates.CheckEmpMonthlyPerf">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
+    <rowspec value="center:71px:noGrow"/>
+    <rowspec value="center:17dlu:noGrow"/>
+    <rowspec value="center:20dlu:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:20dlu:noGrow"/>
+    <rowspec value="center:4dlu:noGrow"/>
+    <rowspec value="center:20dlu:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:20dlu:noGrow"/>
+    <rowspec value="center:4dlu:noGrow"/>
+    <rowspec value="center:20dlu:noGrow"/>
+    <rowspec value="center:4dlu:noGrow"/>
+    <rowspec value="center:20dlu:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:10dlu:noGrow"/>
+    <rowspec value="center:16px:noGrow"/>
+    <colspec value="center:57px:noGrow"/>
+    <colspec value="center:78px:noGrow"/>
+    <colspec value="right:4dlu:noGrow"/>
+    <colspec value="fill:51px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="center:108dlu:noGrow"/>
+    <colspec value="center:4dlu:noGrow"/>
+    <colspec value="left:20dlu:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="center:168px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:12px:noGrow"/>
+    <constraints>
+      <xy x="20" y="20" width="706" height="471"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="f8c89" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="12" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="0" height="0"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font size="22" style="1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="متابعة الموظفين"/>
+        </properties>
+      </component>
+      <component id="c2eb2" class="javax.swing.JComboBox" binding="drop_egptCities">
+        <constraints>
+          <grid row="2" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="1fb96" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="المحافظة"/>
+        </properties>
+      </component>
+      <component id="f56df" class="javax.swing.JCheckBox" binding="chk_UnallowedAbsence">
+        <constraints>
+          <grid row="4" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <horizontalAlignment value="0"/>
+          <text value="غياب"/>
+        </properties>
+      </component>
+      <component id="e1ab9" class="javax.swing.JCheckBox" binding="chk_allowedAbsence">
+        <constraints>
+          <grid row="6" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <text value="غياب بأذن"/>
+        </properties>
+      </component>
+      <component id="881e3" class="javax.swing.JCheckBox" binding="chk_ill">
+        <constraints>
+          <grid row="10" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <text value="أجازة مرضي"/>
+        </properties>
+      </component>
+      <component id="eb327" class="javax.swing.JCheckBox" binding="chk_vacation">
+        <constraints>
+          <grid row="8" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <text value="أجازة"/>
+        </properties>
+      </component>
+      <component id="b9764" class="javax.swing.JTextField" binding="txt_unallowedAbsence">
+        <constraints>
+          <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="eccf7" class="javax.swing.JTextField" binding="txt_allowedAbsence">
+        <constraints>
+          <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="ba7e9" class="javax.swing.JTextField" binding="txt_Vacation">
+        <constraints>
+          <grid row="8" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="b50f4" class="javax.swing.JTextField" binding="txt_ill">
+        <constraints>
+          <grid row="10" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="371f9" class="javax.swing.JTextField" binding="txt_punish">
+        <constraints>
+          <grid row="12" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="c5714" class="javax.swing.JCheckBox" binding="chk_punish">
+        <constraints>
+          <grid row="12" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <text value="جزاءات"/>
+        </properties>
+      </component>
+      <component id="1efc5" class="javax.swing.JTextField" binding="txt_unallowedAbs_notes">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="9d89c" class="javax.swing.JTextField" binding="txt_vacation_notes">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="de48c" class="javax.swing.JTextField" binding="txt_ill_notes">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="44d89" class="javax.swing.JTextField" binding="txt_punish_notes">
+        <constraints>
+          <grid row="12" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="72807" class="javax.swing.JLabel" binding="lbl_UnallowedAbs_extraNotes">
+        <constraints>
+          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="ملحوظات اضافية"/>
+        </properties>
+      </component>
+      <component id="8f6e9" class="javax.swing.JLabel" binding="lbl_Abs_extraNotes">
+        <constraints>
+          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="ملحوظات اضافية"/>
+        </properties>
+      </component>
+      <component id="4822" class="javax.swing.JLabel" binding="lbl_Vacation_extraNotes">
+        <constraints>
+          <grid row="8" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="ملحوظات اضافية"/>
+        </properties>
+      </component>
+      <component id="e6671" class="javax.swing.JLabel" binding="lbl_ill_extraNotes">
+        <constraints>
+          <grid row="10" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="ملحوظات اضافية"/>
+        </properties>
+      </component>
+      <component id="22c42" class="javax.swing.JLabel" binding="lbl_punish_notes">
+        <constraints>
+          <grid row="12" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="ملحوظات اضافية"/>
+        </properties>
+      </component>
+      <component id="682d1" class="javax.swing.JTextField" binding="txt_allowedAbs_notes">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="22cc9" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <text value="أسم الموظف"/>
+        </properties>
+      </component>
+      <component id="a07b" class="javax.swing.JComboBox" binding="drop_empName">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <model/>
+        </properties>
+      </component>
+      <component id="9b443" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="الموقع"/>
+        </properties>
+      </component>
+      <component id="63ae9" class="javax.swing.JComboBox" binding="drop_location">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="c9d1f" class="javax.swing.JButton" binding="btn_save_monthly_emp">
+        <constraints>
+          <grid row="14" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <text value="حفظ"/>
+        </properties>
+      </component>
+      <component id="bef13" class="javax.swing.JButton" binding="btn_exit">
+        <constraints>
+          <grid row="14" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <preferredSize width="100" height="32"/>
+          <text value="خروج"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

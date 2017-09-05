@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Forms.CompanyBills_MainSettings">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:20dlu:grow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:27px:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="left:44dlu:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="left:104dlu:noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:61px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:77px:noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:143px:grow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="left:124dlu:noGrow"/>
+    <colspec value="fill:d:grow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:max(d;4px):noGrow"/>
+    <constraints>
+      <xy x="2" y="20" width="1031" height="339"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="4dec0" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="20" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="4"/>
+          <horizontalTextPosition value="0"/>
+          <text value="بحث بالأسم"/>
+        </properties>
+      </component>
+      <component id="d1eb3" class="javax.swing.JTextField" binding="txt_searchContracts">
+        <constraints>
+          <grid row="4" column="19" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="b0908" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="4"/>
+          <horizontalTextPosition value="4"/>
+          <text value="تفعيل التعاقد"/>
+        </properties>
+      </component>
+      <component id="bf7a1" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="4"/>
+          <text value="قيمة الفاتورة بدون ضريبة"/>
+        </properties>
+      </component>
+      <component id="38779" class="javax.swing.JCheckBox" binding="chk_activeBill">
+        <constraints>
+          <grid row="6" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="66ffe" class="javax.swing.JTextField" binding="txt_billValue">
+        <constraints>
+          <grid row="8" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <columns value="10"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="8b1c5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="4"/>
+          <text value="النص داخل الفاتورة"/>
+        </properties>
+      </component>
+      <component id="a4b96" class="javax.swing.JLabel" binding="lbl_taxesValue">
+        <constraints>
+          <grid row="8" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="4"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="7da3f" class="javax.swing.JLabel" binding="lbl_totalBillValue">
+        <constraints>
+          <grid row="8" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="4"/>
+          <horizontalTextPosition value="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ea281" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <horizontalAlignment value="4"/>
+          <text value="القيمة المضافة"/>
+        </properties>
+      </component>
+      <component id="5bc4a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font style="1"/>
+          <horizontalAlignment value="4"/>
+          <horizontalTextPosition value="4"/>
+          <text value="الإجمالى"/>
+        </properties>
+      </component>
+      <scrollpane id="a30c5" binding="scrl_tree">
+        <constraints>
+          <grid row="6" column="19" row-span="8" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="9b151" class="javax.swing.JTree" binding="tree_contracts">
+            <constraints/>
+            <properties/>
+            <clientProperties>
+              <JTree.lineStyle class="java.lang.String" value=""/>
+            </clientProperties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="74ed4" class="javax.swing.JCheckBox" binding="chk_newContract">
+        <constraints>
+          <grid row="2" column="20" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <hideActionText value="false"/>
+          <horizontalAlignment value="4"/>
+          <horizontalTextPosition value="4"/>
+          <text value="إضافة تعاقد جديد"/>
+        </properties>
+      </component>
+      <component id="800e5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="18" style="1"/>
+          <horizontalAlignment value="4"/>
+          <horizontalTextPosition value="0"/>
+          <text value="إعدادات التعاقد:"/>
+        </properties>
+      </component>
+      <component id="79697" class="javax.swing.JTextField" binding="txt_contractName">
+        <constraints>
+          <grid row="2" column="19" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="9789" class="javax.swing.JComboBox" binding="drop_sector">
+        <constraints>
+          <grid row="2" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <model/>
+        </properties>
+      </component>
+      <component id="4ac86" class="javax.swing.JList" binding="list_bankAccounts">
+        <constraints>
+          <grid row="8" column="1" row-span="7" col-span="7" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+        </properties>
+      </component>
+      <scrollpane id="f7c58">
+        <constraints>
+          <grid row="10" column="10" row-span="5" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="cba38" class="javax.swing.JTextArea" binding="txt_billDetailsTextArea">
+            <constraints/>
+            <properties>
+              <lineWrap value="true"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="fee96" class="javax.swing.JButton" binding="button1" default-binding="true">
+        <constraints>
+          <grid row="20" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="12" style="1"/>
+          <text value="حفظ"/>
+        </properties>
+      </component>
+      <component id="1c2d0" class="javax.swing.JButton" binding="btn_delete">
+        <constraints>
+          <grid row="20" column="19" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="حذف تعاقد"/>
+        </properties>
+      </component>
+      <component id="6b551" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="16" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font size="16" style="1"/>
+          <text value="بداية التعاقد"/>
+        </properties>
+      </component>
+      <component id="84b3b" class="javax.swing.JTextField" binding="txt_startDate">
+        <constraints>
+          <grid row="16" column="12" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <columns value="9"/>
+          <editable value="false"/>
+          <toolTipText value="dd-MM-yyyy"/>
+        </properties>
+      </component>
+      <component id="50ce5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="16" column="10" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font size="16" style="1"/>
+          <text value="نهاية التعاقد"/>
+        </properties>
+      </component>
+      <component id="a576" class="javax.swing.JTextField" binding="txt_endDate">
+        <constraints>
+          <grid row="16" column="5" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <columns value="9"/>
+          <editable value="false"/>
+          <toolTipText value="dd-MM-yyyy"/>
+        </properties>
+      </component>
+      <component id="80f99" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="18" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font size="16" style="1"/>
+          <text value="عدد الأفراد"/>
+        </properties>
+      </component>
+      <component id="54961" class="javax.swing.JTextField" binding="txt_numberLabor">
+        <constraints>
+          <grid row="18" column="12" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <columns value="3"/>
+        </properties>
+      </component>
+      <component id="3d60d" class="javax.swing.JTextField" binding="txt_yearlyInc">
+        <constraints>
+          <grid row="18" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <columns value="3"/>
+        </properties>
+      </component>
+      <component id="b2458" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="18" column="10" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <font size="16" style="1"/>
+          <text value="زيادة سنوية"/>
+        </properties>
+      </component>
+      <component id="30cd5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="18" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <font size="16" style="1"/>
+          <text value="%"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

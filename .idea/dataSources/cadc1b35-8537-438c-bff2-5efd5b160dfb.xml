@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - r2gmduck_employee@johnny.heliohost.org">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="r2gmduck_employee">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema"/>
+    <table id="3" parent="1" name="cities"/>
+    <table id="4" parent="1" name="company_details"/>
+    <table id="5" parent="1" name="finalcontracts112016_sheet1"/>
+    <table id="6" parent="1" name="monthly_bills_highcare"/>
+    <table id="7" parent="1" name="company_bank_accountstbl"/>
+    <table id="8" parent="1" name="empmonthlycheck"/>
+    <table id="9" parent="1" name="generalempinfo"/>
+    <table id="10" parent="1" name="locations_bills"/>
+    <table id="11" parent="1" name="locationspercities"/>
+    <table id="12" parent="1" name="userstbl"/>
+    <column id="13" parent="3" name="city_name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <key id="14" parent="3" name="PRIMARY">
+      <columns>city_name</columns>
+      <primary>1</primary>
+    </key>
+    <column id="15" parent="4" name="company_name">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="16" parent="4" name="taxes_card">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="17" parent="4" name="commercial_log">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="18" parent="4" name="taxes_file">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="19" parent="4" name="sales_tax">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="20" parent="4" name="current_sales_taxes_percent">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="21" parent="5" name="ID">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="22" parent="5" name="Client_ID">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="23" parent="5" name="Num">
+      <data-type>smallint(6)|0</data-type>
+    </column>
+    <column id="24" parent="5" name="Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="25" parent="5" name="city">
+      <data-type>varchar(0)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="26" parent="5" name="Customer">
+      <data-type>varchar(61)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="27" parent="5" name="value">
+      <data-type>decimal(8,2)|0</data-type>
+    </column>
+    <column id="28" parent="5" name="Tax">
+      <data-type>decimal(7,2)|0</data-type>
+    </column>
+    <column id="29" parent="5" name="total">
+      <data-type>decimal(8,2)|0</data-type>
+    </column>
+    <column id="30" parent="5" name="Statue">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="31" parent="5" name="Data">
+      <data-type>varchar(308)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="32" parent="5" name="color1">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="33" parent="5" name="printed">
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="34" parent="5" name="Comments">
+      <data-type>varchar(0)|0</data-type>
+      <default-expression>&apos;&apos;</default-expression>
+    </column>
+    <column id="35" parent="5" name="TotalOut">
+      <data-type>tinyint(4)|0</data-type>
+    </column>
+    <column id="36" parent="6" name="city_name">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="37" parent="6" name="DateOfPrinting">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="38" parent="6" name="location_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="39" parent="6" name="Department">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="40" parent="6" name="bill_value">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="41" parent="6" name="taxes">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="42" parent="6" name="bill_Text">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="43" parent="6" name="activeBill">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="44" parent="6" name="id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="45" parent="6" name="tafqeet">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="46" parent="7" name="company_name">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="47" parent="7" name="Bank_name">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="48" parent="7" name="BankAccount_number">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="49" parent="7" name="bank_bill_sign">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <index id="50" parent="7" name="no_duplicates">
+      <columns>Bank_name
+BankAccount_number</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="51" parent="7" name="no_duplicates">
+      <columns>Bank_name
+BankAccount_number</columns>
+      <underlying-index>no_duplicates</underlying-index>
+    </key>
+    <column id="52" parent="8" name="Name">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="53" parent="8" name="Unallowed_Absence">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="54" parent="8" name="unallowed_Absence_notes">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="55" parent="8" name="Allowed_Absence">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="56" parent="8" name="allowed_Absence_notes">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="57" parent="8" name="Vacation">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="58" parent="8" name="vacation_notes">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="59" parent="8" name="Ill_absence">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="60" parent="8" name="ill_notes">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="61" parent="8" name="Punishment">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="62" parent="8" name="punishment_notes">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="63" parent="8" name="Month">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="64" parent="8" name="Year">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <index id="65" parent="8" name="empCheck_uniqueIndex">
+      <columns>Name
+Month
+Year</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="66" parent="8" name="empCheck_uniqueIndex">
+      <columns>Name
+Month
+Year</columns>
+      <underlying-index>empCheck_uniqueIndex</underlying-index>
+    </key>
+    <foreign-key id="67" parent="8" name="empmonthlycheck_ibfk_1">
+      <columns>Name</columns>
+      <ref-key>~.generalempinfo.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="68" parent="9" name="Name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="69" parent="9" name="Age">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="70" parent="9" name="National_ID">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="71" parent="9" name="PhoneNumber">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="72" parent="9" name="JoinDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="73" parent="9" name="Notes">
+      <data-type>longtext|0</data-type>
+    </column>
+    <column id="74" parent="9" name="CurrentWorkingCity">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="75" parent="9" name="CurrentContract">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="76" parent="9" name="Department">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <index id="77" parent="9" name="CurrentWorkingCity">
+      <columns>CurrentWorkingCity
+CurrentContract
+Department</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="78" parent="9" name="Name">
+      <columns>Name</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="79" parent="9" name="PRIMARY">
+      <columns>Name</columns>
+      <primary>1</primary>
+    </key>
+    <key id="80" parent="9" name="Name">
+      <columns>Name</columns>
+      <underlying-index>Name</underlying-index>
+    </key>
+    <foreign-key id="81" parent="9" name="generalempinfo_ibfk_1">
+      <columns>CurrentWorkingCity
+CurrentContract
+Department</columns>
+      <ref-key>~.locationspercities.locationExist_uniqueIndex</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="82" parent="10" name="city_name">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="83" parent="10" name="location_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="84" parent="10" name="Department">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="85" parent="10" name="bill_value">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="86" parent="10" name="taxes">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="87" parent="10" name="bill_Text">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="88" parent="10" name="activeBill">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <column id="89" parent="10" name="tafqeet">
+      <data-type>text|0</data-type>
+    </column>
+    <index id="90" parent="10" name="city_name">
+      <columns>city_name
+location_name
+Department</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <foreign-key id="91" parent="10" name="locations_bills_ibfk_1">
+      <columns>city_name
+location_name
+Department</columns>
+      <ref-key>~.locationspercities.locationExist_uniqueIndex</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="92" parent="11" name="city_name">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="93" parent="11" name="location_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="94" parent="11" name="NumberOfLabor">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="95" parent="11" name="TotalContractValue">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="96" parent="11" name="StartDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="97" parent="11" name="EndDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="98" parent="11" name="YearlyIncrement">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="99" parent="11" name="Department">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <index id="100" parent="11" name="locationExist_uniqueIndex">
+      <columns>city_name
+location_name
+Department</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="101" parent="11" name="locationExist_uniqueIndex">
+      <columns>city_name
+location_name
+Department</columns>
+      <underlying-index>locationExist_uniqueIndex</underlying-index>
+    </key>
+    <foreign-key id="102" parent="11" name="locationspercities_ibfk_1">
+      <columns>city_name</columns>
+      <ref-key>~.cities.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="103" parent="12" name="user">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="104" parent="12" name="password">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="105" parent="12" name="speicality">
+      <data-type>text|0</data-type>
+    </column>
+  </database-model>
+</dataSource>

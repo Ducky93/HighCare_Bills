@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Class-Path: mysql-connector-java-5.0.8-bin.jar jgoodies-common-1.4.0.j
+ ar commons-lang3-3.1.jar jgoodies-forms-1.6.0.jar commons-digester-2.
+ 1.jar com.lowagie.text-2.1.7.jar apache-commons.jar dynamicreports-ad
+ hoc-4.1.1.jar dynamicreports-core-4.1.1.jar dynamicreports-examples-4
+ .1.1.jar spring-webmvc-portlet-4.3.4.RELEASE.jar spring-context-suppo
+ rt-4.3.4.RELEASE.jar spring-webmvc-4.3.4.RELEASE.jar spring-core-4.3.
+ 4.RELEASE.jar slf4j-simple-1.7.21.jar spring-expression-4.3.4.RELEASE
+ .jar spring-messaging-4.3.4.RELEASE.jar spring-aspects-4.3.4.RELEASE.
+ jar spring-web-4.3.4.RELEASE.jar spring-tx-4.3.4.RELEASE.jar spring-t
+ est-4.3.4.RELEASE.jar javax.xml.bind.jar spring-jms-4.3.4.RELEASE.jar
+  spring-aop-4.3.4.RELEASE.jar spring-websocket-4.3.4.RELEASE.jar spri
+ ng-oxm-4.3.4.RELEASE.jar slf4j-api-1.7.21.jar spring-instrument-4.3.4
+ .RELEASE.jar spring-instrument-tomcat-4.3.4.RELEASE.jar spring-jdbc-4
+ .3.4.RELEASE.jar spring-beans-4.3.4.RELEASE.jar jasperreports-6.3.1.j
+ ar spring-orm-4.3.4.RELEASE.jar spring-context-4.3.4.RELEASE.jar jasp
+ erreports-javaflow-6.3.1.jar
+Main-Class: Forms.LoginPage
+

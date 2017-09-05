@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="contrtest" default="all">
+  
+  
+  <property file="contrtest.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.egg"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.apk"/>
+    <include name="*.swc"/>
+    <include name="*.war"/>
+    <include name="*.ane"/>
+    <include name="*.zip"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/module_highcarejavaapp.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.highcarejavaapp, clean.artifact.highcarejavaapp:jar" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.highcarejavaapp" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.highcarejavaapp:jar" value="${basedir}/out/artifacts/highCareJavaApp_jar"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.highCareJavaApp.jar" value="${artifacts.temp.dir}/highCareJavaApp.jar"/>
+  </target>
+  
+  <target name="clean.artifact.highcarejavaapp:jar" description="clean highCareJavaApp:jar artifact output">
+    <delete dir="${artifact.output.highcarejavaapp:jar}"/>
+  </target>
+  
+  <target name="artifact.highcarejavaapp:jar" depends="init.artifacts, compile.module.highcarejavaapp" description="Build &#39;highCareJavaApp:jar&#39; artifact">
+    <mkdir dir="${artifact.output.highcarejavaapp:jar}"/>
+    <jar destfile="${temp.jar.path.highCareJavaApp.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${highcarejavaapp.output.dir}"/>
+    </jar>
+    <copy file="${temp.jar.path.highCareJavaApp.jar}" tofile="${artifact.output.highcarejavaapp:jar}/highCareJavaApp.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-core-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-core-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-jms-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-jms-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-expression-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-expression-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-webmvc-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-webmvc-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-oxm-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-oxm-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-instrument-tomcat-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-instrument-tomcat-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-context-support-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-context-support-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-messaging-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-messaging-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/slf4j-1.7.21/slf4j-simple-1.7.21.jar" tofile="${artifact.output.highcarejavaapp:jar}/slf4j-simple-1.7.21.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-jdbc-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-jdbc-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-test-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-test-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-webmvc-portlet-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-webmvc-portlet-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/mysql-connector-java-5.0.8-bin.jar" tofile="${artifact.output.highcarejavaapp:jar}/mysql-connector-java-5.0.8-bin.jar"/>
+    <copy file="${basedir}/../../java_Libs/jgoodies-common-1.4.0.jar" tofile="${artifact.output.highcarejavaapp:jar}/jgoodies-common-1.4.0.jar"/>
+    <copy file="${basedir}/../../java_Libs/commons-lang3-3.1.jar" tofile="${artifact.output.highcarejavaapp:jar}/commons-lang3-3.1.jar"/>
+    <copy file="${basedir}/../../java_Libs/jgoodies-forms-1.6.0.jar" tofile="${artifact.output.highcarejavaapp:jar}/jgoodies-forms-1.6.0.jar"/>
+    <copy file="${basedir}/../../java_Libs/commons-digester-2.1.jar" tofile="${artifact.output.highcarejavaapp:jar}/commons-digester-2.1.jar"/>
+    <copy file="${basedir}/../../java_Libs/com.lowagie.text-2.1.7.jar" tofile="${artifact.output.highcarejavaapp:jar}/com.lowagie.text-2.1.7.jar"/>
+    <copy file="${basedir}/../../java_Libs/apache-commons.jar" tofile="${artifact.output.highcarejavaapp:jar}/apache-commons.jar"/>
+    <copy file="${basedir}/../../java_Libs/dynamicreports-4.1.1/dist/dynamicreports-adhoc-4.1.1.jar" tofile="${artifact.output.highcarejavaapp:jar}/dynamicreports-adhoc-4.1.1.jar"/>
+    <copy file="${basedir}/../../java_Libs/dynamicreports-4.1.1/dist/dynamicreports-core-4.1.1.jar" tofile="${artifact.output.highcarejavaapp:jar}/dynamicreports-core-4.1.1.jar"/>
+    <copy file="${basedir}/../../java_Libs/dynamicreports-4.1.1/dist/dynamicreports-examples-4.1.1.jar" tofile="${artifact.output.highcarejavaapp:jar}/dynamicreports-examples-4.1.1.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-aop-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-aop-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-beans-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-beans-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-web-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-web-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-orm-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-orm-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-aspects-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-aspects-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-instrument-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-instrument-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-tx-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-tx-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-websocket-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-websocket-4.3.4.RELEASE.jar"/>
+    <copy file="${basedir}/../../java_Libs/slf4j-1.7.21/slf4j-api-1.7.21.jar" tofile="${artifact.output.highcarejavaapp:jar}/slf4j-api-1.7.21.jar"/>
+    <copy file="${basedir}/../../java_Libs/jasperreports-6.3.1/dist/jasperreports-6.3.1.jar" tofile="${artifact.output.highcarejavaapp:jar}/jasperreports-6.3.1.jar"/>
+    <copy file="${basedir}/../../java_Libs/jasperreports-6.3.1/dist/jasperreports-javaflow-6.3.1.jar" tofile="${artifact.output.highcarejavaapp:jar}/jasperreports-javaflow-6.3.1.jar"/>
+    <copy file="${basedir}/../../java_Libs/spring-framework-4.3.4.RELEASE/libs/spring-context-4.3.4.RELEASE.jar" tofile="${artifact.output.highcarejavaapp:jar}/spring-context-4.3.4.RELEASE.jar"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.highcarejavaapp:jar" description="Build all artifacts">
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>

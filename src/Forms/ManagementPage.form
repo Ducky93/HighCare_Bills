@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Forms.ManagementPage">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
+    <rowspec value="center:max(d;90px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;90px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;90px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;90px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;90px):noGrow"/>
+    <colspec value="fill:148px:grow"/>
+    <constraints>
+      <xy x="372" y="20" width="211" height="614"/>
+    </constraints>
+    <properties/>
+    <border type="none">
+      <title-color color="-16777216"/>
+    </border>
+    <children>
+      <component id="51044" class="javax.swing.JButton" binding="طباعةالفواتيرButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <text value="طباعة الفواتير"/>
+        </properties>
+      </component>
+      <component id="ff016" class="javax.swing.JButton" binding="إدارةالتعاقداتButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <hideActionText value="false"/>
+          <text value="إدارة التعاقدات"/>
+        </properties>
+      </component>
+      <component id="4b70c" class="javax.swing.JButton" binding="إدارةالحساباتالبنكيةButton" default-binding="true">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <text value="إدارة الحسابات البنكية"/>
+        </properties>
+      </component>
+      <component id="135d7" class="javax.swing.JButton" binding="خروجButton" default-binding="true">
+        <constraints>
+          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <text value="خروج"/>
+        </properties>
+      </component>
+      <component id="cfd87" class="javax.swing.JButton" binding="تغييربياناتالشركةالأساسيةButton" default-binding="true">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <label value="تغيير بيانات الشركة الأساسية"/>
+          <text value="تغيير بيانات الشركة الأساسية"/>
+        </properties>
+      </component>
+      <component id="4daa6" class="javax.swing.JButton" binding="btn_contr_management">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="إعدادات التعاقدات"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
